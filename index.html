@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Crystals Collector Game</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="text-center">
+                <h1>Crystals Collector Game</h1>
+                <br>
+                <h2><span id="message">Please read the rules before you begin the game!</span></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sidebar" class="col-lg-2 text-right">
+                <h2>Wins</h2>
+                <span id="wins">0</span>
+                <br><br>
+                <h2>Losses</h2>
+                <span id="losses">0</span>
+                <br><br>
+                <h2>Goal</h2>
+                <span id="goal-number"></span>
+                <br><br>
+                <h2>Total</h2>
+                <span id="total-number">0</span>
+            </div>
+            <div class="col-lg-10">
+                <div class="row text-center">
+                    <div class="col-lg-4 col-lg-offset-1 buttons">
+                        <button id="restart-button" class="btn btn-lg">Restart</button>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-2 buttons">
+                        <button id="rules-button" class="btn btn-lg">Rules</button>
+                        <div id="rules" class="modal">
+                            <div class="modal-content">
+                                <button id="close-button" class="btn btn-lg">&times;</button>
+                                <h2>Rules</h2>
+                                <hr>
+                                <p>You will be given a Goal number to try to reach at the beginning of each game. In addition, there will be four crystal balloons that will have a hidden randomly generated number for each crystal balloon. You can accomplish reaching the Goal number by clicking on these crystal balloons. Each time you click on them, the hidden number will be added to the Total number.</p>
+                                <p>You win the game once the Total number equals the Goal number. The game will not end unless if you win or if the Total number becomes higher than the Goal number, which at that point, you have lost the game. You can restart the game at any time by clicking on the Restart button.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br><br>
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row crystals">
+                            <div class="col-lg-3">
+                                <img src="assets/images/crystal1.gif" id="crystal1">
+                            </div>
+                            <div class="col-lg-3">
+                                <img src="assets/images/crystal2.gif" id="crystal2">
+                            </div>
+                            <div class="col-lg-3">
+                                <img src="assets/images/crystal3.gif" id="crystal3">
+                            </div>
+                            <div class="col-lg-3">
+                                <img src="assets/images/crystal4.gif" id="crystal4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
